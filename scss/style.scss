@@ -21,18 +21,26 @@ a{
     @content;
    }
 }
-@mixin res2($min:760px,$max:1045){
+@mixin res2($min:760px,$max:1045px){
   @media (min-width:$min) and (max-width:$max){
     @content;
    }
 }
+
 .bg1{
     background-image: url(../images/background-12.jpg);
     background-size:cover;
     background-position: center;
     height: 125vh;
     overflow: hidden;
+    @include res{
+      height: 190vh;
+    }
     @include res1{
+      padding: 10px 20px;
+      height: 350vh;
+    }
+    @include res2{
       padding: 10px 20px;
       height: 250vh;
     }
@@ -54,12 +62,24 @@ a{
     @include res1{
       flex-direction: column;
     }
-  }
+    @include res2{
+      flex-direction: column;
+    }
+    .flax{
+      @include res2{
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+   
+    
+  }   
   
 
   nav{
     ul{
         list-style: none;
+        
         @include res{
           display: none;
         }
@@ -84,6 +104,7 @@ nav li:hover a {
   
   
   .logo{
+    
     flex-grow:1;
     padding-left:20px;
     
@@ -95,7 +116,11 @@ nav li:hover a {
     border-radius:30px;
     margin-left: 20px;
     color:#fff;
-   
+    @include res2{
+      border:none;
+      padding: 0;
+  
+    }
   }
   .bg1_left{
     
@@ -167,8 +192,11 @@ justify-content: space-around;
  .bgg1{
   background-image:url(../images/background-12.jpg);
   height: 150vh;
+  @include res{
+    height: auto;
+  }
   @include res1{
-    height: 140vh;
+    height: auto;
   }
   .small-box{
     text-align: center;
@@ -181,6 +209,10 @@ justify-content: space-around;
     @include res1{
       height: auto;
       overflow-y: hidden;
+      
+    }
+    @include res2{
+      height: auto;
       
     }
   }
@@ -245,6 +277,9 @@ justify-content: space-around;
     background-image: url(../images/background-12.jpg);
     background-size:cover;
     background-position: center;
+    @include res1{
+      height: auto;
+    }
   }
   .ff{
     display:flex;
@@ -266,6 +301,10 @@ justify-content: space-around;
     text-align: center;
     padding:10px 20px;
   }
+  @include res2{
+    text-align: center;
+    padding:10px 20px;
+  }
   
   h1{
     padding-top: 40px;
@@ -273,6 +312,14 @@ justify-content: space-around;
     @include res{
       text-align: center;
       font-size: 30px;
+    }
+    @include res1{
+      text-align: center;
+      font-size: 40px;
+    }
+    @include res2{
+      text-align: center;
+      font-size: 55px;
     }
    
   }
@@ -290,6 +337,12 @@ justify-content: space-around;
       height:250px;
     }
     @include res1{
+      display: flex;
+      align-items: center;
+      width:360px;
+      height:290px;
+    }
+    @include res2{
       display: flex;
       align-items: center;
       width:360px;
@@ -328,6 +381,12 @@ justify-content: space-around;
     flex-direction: column;
     align-items: center;
   }
+  @include res2{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
   background-image: url(../images/background-3.jpg);
   background-size:cover;
@@ -349,6 +408,10 @@ justify-content: space-around;
     }
     @include res1{
       width:400px;
+      height:200px;
+    }
+    @include res2{
+      width:600px;
       height:200px;
     }
     width:580px;
@@ -375,6 +438,9 @@ justify-content: space-around;
       flex-direction: column;
     }
     @include res1{
+      flex-direction: column;
+    }
+    @include res2{
       flex-direction: column;
     }
     
@@ -486,6 +552,9 @@ width: 50px;
 height: 50px;
 }
 .aa{
+  @include res2{
+    height:auto;
+  }
   background-color: #06254C;
   color: #fff;
   position: fixed;
@@ -547,6 +616,10 @@ height: 50px;
     @include res1{
       margin-bottom: 30px;
     }
+    @include res2{
+      margin-left:10px;
+      margin-right: 10px;
+    }
     .lar{
       font-size: 40px;
       font-weight: 400;
@@ -567,9 +640,15 @@ height: 50px;
   align-items: center;
   padding-bottom: 40px;
   height: 125vh;
+  @include res{
+    height: auto;
+  }
   @include res1{
-   height:120vh;
+   height:auto;
     
+  }
+  @include res2{
+    height: auto;
   }
   .boxx{
     text-align: center;
@@ -610,8 +689,12 @@ height: 50px;
   @include res{
     margin-bottom: 20px;
    width: auto;
-    
   }
+  @include res2{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
   @include res1{
     margin-bottom: 30px;
    width: auto;
@@ -645,12 +728,16 @@ height: 50px;
     @include res1{
       display: none;
     }
+    @include res2{
+      display: none;
+    }
     
   }
   .footer-center{
     @include res{
       display:none;
     }
+    
   }
   .f-1{
     display: flex;
