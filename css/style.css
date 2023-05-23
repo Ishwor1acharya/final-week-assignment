@@ -16,7 +16,7 @@ a {
 }
 
 .bg1 {
-  background-image: url(/images/background-12.jpg);
+  background-image: url(../images/background-12.jpg);
   background-size: cover;
   background-position: center;
   height: 130vh;
@@ -139,7 +139,7 @@ nav li:hover a {
 }
 
 .bgg1 {
-  background-image: url(/images/background-12.jpg);
+  background-image: url(../images/background-12.jpg);
   height: 100vh;
 }
 .bgg1 .small-box {
@@ -214,7 +214,7 @@ nav li:hover a {
 }
 
 .bg21 {
-  background-image: url(/images/background-12.jpg);
+  background-image: url(../images/background-12.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -257,7 +257,7 @@ nav li:hover a {
 }
 
 .bg3 {
-  background-image: url(/images/background-3.jpg);
+  background-image: url(../images/background-3.jpg);
   background-size: cover;
   background-position: center;
   color: #fff;
