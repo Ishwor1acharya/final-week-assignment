@@ -583,11 +583,11 @@ height: 50px;
   color: #fff;
   height: 120vh;
   @include res{
-    height:230vh;
+    height:auto;
     
   }
   @include res1{
-    height:240vh;
+    height:auto;
     
   }
   

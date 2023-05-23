@@ -749,12 +749,12 @@ nav li:hover a {
 }
 @media (min-width: 0px) and (max-width: 480px) {
   .bg5 {
-    height: 230vh;
+    height: auto;
   }
 }
 @media (min-width: 480px) and (max-width: 760px) {
   .bg5 {
-    height: 240vh;
+    height: auto;
   }
 }
 .bg5 h2 {
